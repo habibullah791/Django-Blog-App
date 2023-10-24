@@ -1,0 +1,11 @@
+<!-- templates/post_new.html-->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Delete Blog</h1>
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <h3>Are You Sure You Want To Delete The Blog !</h3>
+    <input type="submit" value="Delete">
+</form>
+{% endblock content %}

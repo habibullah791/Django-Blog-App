@@ -9,8 +9,9 @@
     <body>
         <header>
             <h1><a href="{% url 'home' %}" style="text-decoration: none; color: #fff;">Tech Blog</a></h1>
+            <a href="{% url 'new_blog' %}"><h3>+ New Blog</h3></a>
         </header>
-        <div>
+        <div class="blog_body">
             {% block content %}
             {% endblock content %}
         </div>
