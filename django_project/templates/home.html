@@ -1,0 +1,12 @@
+<!-- templates/home.html-->
+
+{% extends "base.html" %}
+{% block content %}
+{% for blog in blog_list %}
+    <section>
+        <a href="{% url 'blog_detail' blog.pk %}"><h2>{{ blog.title }}</h2></a>
+        <p>{{ blog.body }}</p>
+    </section>
+{% endfor %}
+
+{% endblock content %}
