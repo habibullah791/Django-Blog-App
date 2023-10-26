@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "blog.apps.BlogConfig" # new
+    "blog.apps.BlogConfig", # new
+    "accounts.apps.AccountsConfig" #new
 ]
 
 MIDDLEWARE = [
@@ -119,9 +120,19 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"] # new
+STATIC_ROOT = BASE_DIR / "staticfiles" #new
+STATICFILES_STORATE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+# on successful login it will redirect to the 
+LOGIN_REDIRECT_URL = "home" #new
+
+# on successful logout it will redirect to the 
+LOGOUT_REDIRECT_URL = "home"
