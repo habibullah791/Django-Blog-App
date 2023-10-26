@@ -1,0 +1,18 @@
+<!-- templates/post_detail.html-->
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="post-entry">
+    <div class="blog_head_container">
+        <h2>{{ object.title }}</h2>
+        <div class="edit_del_btn">
+            <p class="edit_blog"><a href="{% url 'edit_blog' blog.pk %}"> Edit Blog</a></p>
+            <p class="del_blog"><a href="{% url 'del_blog' blog.pk %}"> Delete Blog</a></p>
+        </div>
+    </div>
+    <p>{{ object.body }}</p>
+</div>
+
+
+{% endblock content %}

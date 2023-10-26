@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #495E57;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #495E57;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+header h1 {
+    font-size: 24px;
+}
+div {
+    background-color: #F5F7F8;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+section{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+header  a{
+    text-decoration: none;
+    color: #fff;
+}
+div a{
+    color: #495E57;
+    text-decoration: none;
+}
+
+.blog_head_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 12px;
+}
+
+.blog_body{
+    width: 60%;
+    margin: auto;
+}
+
+.edit_blog{
+    padding: 8px;
+    font-size: 10px;
+    border: 1px solid #fff;
+    background-color: #495E57;
+}
+.del_blog{
+    padding: 8px;
+    font-size: 10px;
+    border: 1px solid #fff;
+    background-color: red;
+}
+
+.edit_blog a, .del_blog a{
+    color: #fff;
+}
+
+.edit_del_btn{
+    display: flex;
+    padding: 0 8px;
+}
+
+
+/* input type submitt */
+input[type=submit]{
+    background-color: #495E57;
+    color: #fff;
+    padding: 8px 12px;
+    border: 1px solid #495E57;
+    cursor: pointer;
+}

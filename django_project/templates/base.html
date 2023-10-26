@@ -1,0 +1,27 @@
+<!-- templates/base.html-->
+{% load static %}
+<html>
+    <head>
+        <title>Tech Blog | Django</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    </head>
+    <body>
+        <header>
+            <h1><a href="{% url 'home' %}" style="text-decoration: none; color: #fff;">Tech Blog</a></h1>
+            <a href="{% url 'new_blog' %}"><h3>+ New Blog</h3></a>
+        </header>
+        <div class="blog_body">
+            {% if user.is_authenticated %}
+                <p>Hi {{ user.username }}!</p>
+                <p><a href="{% url 'logout' %}"> Logout</a></p>
+                {% else %}
+                <p>You are not logged in.</p>
+                <a href="{% url 'login' %}">Log In</a> |    
+                <a href="{% url 'signup' %}">Sign Up</a>
+            {% endif %}
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
